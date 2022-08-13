@@ -1,4 +1,4 @@
-name: Scheduled email sending 1
+name: Scheduled email sending 2
 
 on:
   workflow_dispatch:
@@ -8,5 +8,6 @@ on:
 jobs:
   scheduled-email-sending:
     uses: ./.github/workflows/send-email.yml
+    secrets: inherit
     with:
       bank: "遠東銀行"
