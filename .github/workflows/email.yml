@@ -2,7 +2,7 @@ name: send email
 
 on:
   schedule:
-    - cron: "40 * * * *"
+    - cron: "30 * * * *"
 
 env:
   BANK: "tukg"
