@@ -1,0 +1,11 @@
+name: Scheduled email sending 2
+
+on:
+  schedule:
+    - cron: "35 * * * *"
+
+jobs:
+  scheduled-email-sending:
+    uses: ./.github/workflows/send-email
+    with:
+      bank: "匯豐銀行、國泰世華"
