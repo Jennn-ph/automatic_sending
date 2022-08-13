@@ -1,8 +1,8 @@
-name: Scheduled email sending 2
+name: Scheduled email sending 1
 
 on:
   schedule:
-    - cron: "35 * * * *"
+    - cron: "30 * * * *"
 
 jobs:
   scheduled-email-sending:
