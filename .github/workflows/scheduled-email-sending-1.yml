@@ -1,6 +1,7 @@
 name: Scheduled email sending 1
 
 on:
+  workflow_dispatch:
   schedule:
     - cron: "30 * * * *"
 
