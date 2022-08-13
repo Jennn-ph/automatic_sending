@@ -8,5 +8,6 @@ on:
 jobs:
   scheduled-email-sending:
     uses: ./.github/workflows/send-email.yml
+    secrets: inherit
     with:
       bank: "匯豐銀行、國泰世華"
