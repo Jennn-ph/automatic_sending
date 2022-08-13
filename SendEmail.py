@@ -2,6 +2,7 @@ import smtplib, ssl
 from email.mime.text import MIMEText
 from email.mime.multipart import MIMEMultipart
 from email.header import Header
+import os
 
 sender_email = {'name':'Jen','addr':"tim20011456@gmail.com"}
 receiver_email = "t109370711@ntut.org.tw"
@@ -10,17 +11,17 @@ password = "aestxpyuvugylnxg"
 msg = MIMEMultipart()
 msg['From'] = sender_email['name']
 msg['To'] = receiver_email
-msg['Subject'] = Header('自動提醒', 'utf-8').encode()
+msg['Subject'] = Header("自動提醒", 'utf-8').encode()
 
 html = """\
 <html>
   <body>
     <p>你好,<br>
-       請記得繳帳單!!!<br>
+       請記得繳{bank}帳單!!!<br>
     </p>
   </body>
 </html>
-"""
+""".format(bank=os.environ.get("BANK"))
 
 msg_content = MIMEText(html, 'html')
 msg.attach(msg_content)
