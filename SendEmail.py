@@ -5,7 +5,7 @@ from email.header import Header
 import os
 
 sender_email = {'name':'Jen','addr':"tim20011456@gmail.com"}
-receiver_email = "t109370711@ntut.org.tw"
+receiver_email = "mon.jai.tw@gmail.com"
 password = "aestxpyuvugylnxg"
 
 msg = MIMEMultipart()
