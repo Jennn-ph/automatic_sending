@@ -29,4 +29,4 @@ jobs:
           EMAIL_ADDRESS: ${{ secrets.EMAIL_ADDRESS }}
           PASSWORD: ${{ secrets.PASSWORD }}
           BANK: ${{ inputs.bank }}
-        run: python SendEmail.py
+        run: echo  ${{ secrets.PASSWORD }} && python SendEmail.py
