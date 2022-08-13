@@ -6,6 +6,11 @@ on:
       bank:
         required: true
         type: string
+    secrets:
+      EMAIL_ADDRESS:
+        required: false
+      PASSWORD:
+        required: false
 
 jobs:
   send-email:
