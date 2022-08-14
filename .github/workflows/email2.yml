@@ -5,6 +5,9 @@ on:
     - cron: "35 * * * *"
 
 env:
+  SENDER_ADDR: ${{ secrets.SENDER_ADDR_TIM }}
+  RECEIVER_ADDR: "t109370711@ntut.org.tw"
+  PASSWORD: ${{ secrets.EMAIL_PASSWORD }}
   BANK: "遠東銀行"
 
 jobs:
