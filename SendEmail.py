@@ -4,24 +4,24 @@ from email.mime.multipart import MIMEMultipart
 from email.header import Header
 import os
 
-sender_email = {'name':'Jen','addr':"tim20011456@gmail.com"}
-receiver_email = "t109370711@ntut.org.tw"
-password = "aestxpyuvugylnxg"
+sender_email = {'name': 'Jen', 'addr': os.environ.get("SENDER_ADDR")}
+receiver_email = os.environ.get("RECEIVER_ADDR") 
+password = os.environ.get("PASSWORD") 
 
 msg = MIMEMultipart()
 msg['From'] = sender_email['name']
 msg['To'] = receiver_email
 msg['Subject'] = Header("自動提醒", 'utf-8').encode()
 
-html = """\
+html = f"""\
 <html>
   <body>
     <p>你好,<br>
-       請記得繳{bank}帳單!!!<br>
+       請記得繳{os.environ.get("BANK")}帳單!!!<br>
     </p>
   </body>
 </html>
-""".format(bank=os.environ.get("BANK"))
+"""
 
 msg_content = MIMEText(html, 'html')
 msg.attach(msg_content)
@@ -33,7 +33,6 @@ with smtplib.SMTP_SSL("smtp.gmail.com", 465, context=context) as server: #指定
     status = server.sendmail(sender_email['addr'], receiver_email, msg.as_string()) #傳送電子郵件訊息
     
     if not bool(status): #bool可省略, status有「錯誤」時會回傳true
-        print('success')
+        print('Success')
     else:
-        print(f'failure。 {status}')
-    
+        print(f'Failure。 {status}')
