@@ -2,10 +2,14 @@ name: send email
 
 on:
   schedule:
-    - cron: "30 * * * *"
+    - cron: "* * * * *"
 
 env:
+  SENDER_ADDR: secret.SENDER_ADDR_TIM
+  RECEIVER_ADDR: "t109370711@ntut.org.tw"
+  PASSWORD: secrets.EMAIL_PASSWORD
   BANK: "匯豐銀行&國泰世華"
+  
 
 jobs:
   build:
