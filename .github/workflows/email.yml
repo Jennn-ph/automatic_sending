@@ -2,7 +2,7 @@ name: send email
 
 on:
   schedule:
-    - cron: "* * * * *"
+    - cron: "* 2 * * *"
 
 env:
   SENDER_ADDR: ${{ secrets.SENDER_ADDR_TIM }}
