@@ -5,6 +5,9 @@ on:
     - cron: "30 10 15 * *"
 
 env:
+  SENDER_ADDR: ${{ secrets.SENDER_ADDR_TIM }}
+  RECEIVER_ADDR: ${{ secrets.RECEIVER_ADDR_HSING }}
+  PASSWORD: ${{ secrets.EMAIL_PASSWORD }}
   BANK: "銀行"
 
 jobs:
