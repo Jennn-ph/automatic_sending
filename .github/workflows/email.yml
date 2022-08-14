@@ -5,7 +5,7 @@ on:
     - cron: "30 * * * *"
 
 env:
-  BANK: "匯豐銀行、國泰世華"
+  BANK: "匯豐銀行&國泰世華"
 
 jobs:
   build:
