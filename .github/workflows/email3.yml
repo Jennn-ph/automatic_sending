@@ -2,11 +2,11 @@ name: send email 3
 
 on:
   schedule:
-    - cron: "* * * * *"
+    - cron: "30 15 15 * *"
 
 env:
   SENDER_ADDR: ${{ secrets.SENDER_ADDR_TIM }}
-  RECEIVER_ADDR: ${{ secrets.RECEIVER_ADDR_NTUT }}
+  RECEIVER_ADDR: ${{ secrets.RECEIVER_ADDR_HSING }}
   PASSWORD: ${{ secrets.EMAIL_PASSWORD }}
   BANK: "銀行"
 
