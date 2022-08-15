@@ -6,7 +6,7 @@ on:
 
 env:
   SENDER_ADDR: ${{ secrets.SENDER_ADDR_TIM }}
-  RECEIVER_ADDR: "t109370711@ntut.org.tw"
+  RECEIVER_ADDR: ${{ secrets.RECEIVER_ADDR_NTUT }}
   PASSWORD: ${{ secrets.EMAIL_PASSWORD }}
   BANK: "銀行"
 
