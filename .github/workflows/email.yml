@@ -1,8 +1,9 @@
 name: send email
 
 on:
+  workflow_dispatch:
   schedule:
-    - cron: "40 14 17 * *"
+    - cron: "42 14 17 * *"
 
 env:
   SENDER_ADDR: ${{ secrets.SENDER_ADDR_TIM }}
